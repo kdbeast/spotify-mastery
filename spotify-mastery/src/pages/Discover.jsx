@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { genres } from "../assets/constants";
 import { Error, Loader, SongCard } from "../components";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const fetchSongs = () => {
   return new Promise((resolve) => {
@@ -100,7 +100,7 @@ const Discover = () => {
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
 
   const genreTitle = "Pop";
@@ -134,7 +134,7 @@ const Discover = () => {
           ))}
         </select>
       </div>
-      <div className="flex flex-wrap  justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-8">
         {songs.map((song, i) => (
           <SongCard
             i={i}
