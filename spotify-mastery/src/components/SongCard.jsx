@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import PlayPause from "./PlayPause";
 import { useDispatch } from "react-redux";
 import { playPause, setActiveSong } from "../redux/features/playerSlice";

@@ -43,7 +43,7 @@ const fetchSongs = () => {
           genre: "Hip-Hop",
         },
       ]);
-    }, 5000);
+    }, 2000);
   });
 };
 
